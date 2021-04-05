@@ -1,4 +1,4 @@
-# Mobile-App-project
+# Mobile-Healthcare App-project
 XAML C#
 Mobile app designed for healthcare workers to quickly view occupied rooms by availible room number. Once room number is selected, the most essential occupant/patient info(Name, Doctor, ailment, treatments, admit/discharge dates) is availible at a glance.
 Ability to add, edit and delete rooms/ room info, patient info and treatment info. Search by room number function.
