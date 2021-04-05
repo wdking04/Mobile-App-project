@@ -4,3 +4,5 @@ Mobile app designed for healthcare workers to quickly view occupied rooms by ava
 SCREENSHOTS
 
 ![Screenshot_20210125-092703](https://user-images.githubusercontent.com/54335750/113625614-20a14000-962f-11eb-9633-b5550ce64904.png)
+
+![Screenshot_20210125-092724](https://user-images.githubusercontent.com/54335750/113625729-4af2fd80-962f-11eb-87c5-a2fb6a22bcf4.png)
