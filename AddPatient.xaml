@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="CapKing1.AddPatient">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Margin="10,0,10,0">
+            <Label Text="Add Patient"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+            <Entry Placeholder="Patient Name" 
+               x:Name="txtPatientTitle"/>
+            <Picker Title="Status" x:Name="pickerPatientStatus">
+                <Picker.Items>
+                    <x:String>Initial</x:String>
+                    <x:String>In Progress</x:String>
+                    <x:String>Follow Up</x:String>
+                   
+                </Picker.Items>
+            </Picker>
+            <!--<Label Text="Admit" />
+            <DatePicker x:Name="dpStartDate" Format="D"></DatePicker>
+            <Label Text="Est.Discharge" />
+            <DatePicker x:Name="dpEndDate" Format="D"></DatePicker>-->
+            <Entry Placeholder="Doctor" 
+               x:Name="txtDoctorName"/>
+            
+            <Entry Placeholder="Notes" 
+               x:Name="txtNotes"/>
+            <!--<Picker Title="Reminder" x:Name="pickerNotifications">
+                <Picker.Items>
+                    <x:String>No</x:String>
+                    <x:String>Yes</x:String>
+                </Picker.Items>
+            </Picker>-->
+            <Button Text="Save" 
+                x:Name="btnSavePatient"
+                     HeightRequest="60"
+                Clicked="btnSavePatient_Clicked"/>
+                <Button Text="Back" 
+                x:Name="btnBack"
+                         HeightRequest="60"
+                Clicked="btnBack_Clicked"/>
+            </StackLayout>
+            </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

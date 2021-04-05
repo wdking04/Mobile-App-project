@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             NavigationPage.HasBackButton="False"
+             x:Class="CapKing1.LoginPage">
+    <StackLayout BackgroundColor="White">
+        <Label Text="Welcome"
+               FontSize="Title"
+               FontFamily="Droid Serif"
+               HorizontalTextAlignment="Center"
+               VerticalTextAlignment="Center"
+               BackgroundColor="LightBlue"
+               HeightRequest="75"
+               TextColor="Black"/>
+        <StackLayout VerticalOptions="CenterAndExpand" Margin="20">
+            <Entry x:Name="userNameEntry"
+               TextColor="Black"
+               Placeholder="Enter User Name"
+               PlaceholderColor="Black"/>
+            <Entry x:Name="passwordEntry" 
+               TextColor="Black"
+               Placeholder="Enter Password"
+               PlaceholderColor="Black"
+               IsPassword="True"/>
+            <Button Text="Log in"
+                TextColor="Black"
+                BackgroundColor="LightBlue"
+                Margin="0,50,0,0"
+                x:Name="loginButton"
+                Clicked="LoginButton_Clicked"/>
+        </StackLayout>
+    </StackLayout>
+
+</ContentPage>

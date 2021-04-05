@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             NavigationPage.HasBackButton="False"
+             x:Class="CapKing1.MainPage">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Name ="btnNewRoom" Text="Add New Room" Clicked="btnNewRoom_Clicked"/>
+        <ToolbarItem Name="logoutButton" Text="Logout" Clicked="OnLogout"/>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+
+        
+
+
+            <StackLayout>
+            <SearchBar Placeholder="Search by room number"
+                TextChanged="SearchBar_TextChanged"></SearchBar>
+            <!--<Image Source="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQe1fCgStxZqEJWkL91Po4XHROJoRzMvwEzhQ&usqp=CAU.png"
+       WidthRequest="{OnPlatform iOS=300, Android=250}"
+       HorizontalOptions="Center" Margin="0, 30, 0, 20"/>-->
+            <Label Text="My Rooms" TextColor="gray"
+               Margin="10,10,10,10"
+               FontSize="25"
+               FontAttributes="Bold"
+               HorizontalOptions="Center" />
+            
+            <ListView x:Name="roomListView">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="Start">
+
+                                <Label Text="{Binding RoomName}" VerticalOptions="Start" Margin="05, 05, 05, 0" TextColor="Black"
+                            FontSize= "18"
+                            FontAttributes="Bold"/>
+
+                               
+
+                                <Label Text= "Admit" VerticalOptions="Start"  Margin="05, 15, 05, 0" TextColor="Black"
+                                       FontSize="8"/>
+                                <Label Text="{Binding Start,StringFormat='{}{0:MM/dd/yyyy }'}" VerticalOptions="Start" Margin="05, 10, 05, 0" TextColor="Black"
+                                   FontSize= "12"/>
+
+                                <!--<Label Text="{Binding CourseName}" VerticalOptions="Start" Margin="05, 11, 05, 0" TextColor="Black"
+                            FontSize= "12"/>-->
+                                <Label Text= "Projected Discharge" VerticalOptions="Start"  Margin="05, 15, 05, 0" TextColor="Black"
+                                       FontSize="8"/>
+                                <Label Text="{Binding End,StringFormat='{}{0:MM/dd/yyyy }'}" VerticalOptions="Start" Margin="05, 10, 05, 0" TextColor="Black"
+                                   FontSize= "12"/>
+
+                            </StackLayout>
+                    </ViewCell>
+
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        </StackLayout>
+        
+    </ContentPage.Content>
+</ContentPage>

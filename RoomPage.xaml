@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="CapKing1.RoomPage"
+             Title="Term">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout>
+                <Label Text="{Binding CourseName}"
+                    VerticalOptions="CenterAndExpand" 
+                    HorizontalOptions="CenterAndExpand"
+                       FontSize="20"/>
+            </StackLayout>
+            <StackLayout VerticalOptions="CenterAndExpand">
+                
+                <Label Text="Admit" HorizontalOptions="Center"/>
+                <Label x:Name="roomStart" HorizontalOptions="Center"
+                       FontSize="20"/>
+                
+                <Label Text="Est. Discharge" HorizontalOptions="Center"/>
+                <Label x:Name="roomEnd" HorizontalOptions="Center"
+                       FontSize="20"/>
+
+                <Label Text="Patient Name(s):" HorizontalOptions="Start"
+                       Margin="10,0,0,0"/>
+
+                <ListView x:Name="patientListView">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell IsEnabled="True">
+                                <StackLayout Orientation="Horizontal" 
+                                             Margin="10,20,0,0">
+                                     
+                       
+                                    <Label Text="{Binding PatientName}"  TextColor="Black"/>
+                                </StackLayout>
+                            </ViewCell>
+
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+                <Button Text="Add Patient" 
+                x:Name="btnAddPatient"
+                         HeightRequest="60"
+                Clicked="btnAddPatient_Clicked"/>
+                <Button Text="Edit Room" 
+                x:Name="btnEditRoom"
+                         HeightRequest="60"
+                Clicked="btnEditRoom_Clicked"/>
+                <Button Text="Delete Room" 
+                x:Name="btnDeleteRoom"
+                         HeightRequest="60"
+                Clicked="btnDeleteRoom_Clicked"/>
+               
+                
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
